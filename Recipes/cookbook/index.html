@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial- scale=1.0">
+
+    <title>Cookbook: Communion Wafers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="screen">
+        <h1>
+            cookbook:<br>
+            communion<br>
+            Wafers
+        </h1>
+
+        <p class="sub">
+            Flour. Water. Heat.<br>
+            Make Sixteen wafers step by step.
+        </p>
+
+        <p class="info">
+            1 cup water<br>
+            2c cups all purpose flour<br>
+            Yield: 16 wafers<br>
+            Time 30 minutes
+        </p>
+
+        <button class="button" onclick="goTo('knead')">
+            Start Making
+        </button>
+    </section>
+
+    <section class="screen center" id="knead">
+        <h2>Knead</h2>
+        <p>
+            Click the button until the dough becomes smooth
+        </p>
+        <div class="dough" id="dough"></div>
+        <button class="button" onclick="kneadDough()">
+        </button>
+        <p class="progress" id="kneadText">
+            0 / 3
+        </p>
+
+        <button
+        class="button hidden"
+        id="divideButten"
+        onclick="goTo('divide')"
+        >
+        Next: divide
+        </button>
+    </section>
+
+    <section class="screen center" id="divide">
+
+        <h2>Divide</h2>
+        <p>
+            Turn one dough into four equal portions.
+        </p>
+        <div class="protion-area" id="divide">
+            <div class="portion"></div>
+        </div>
+
+        <button
+        class="button"
+        id="divideOnce"
+        onclick="dividefour()"
+        >
+    Divide into 4
+    </button>
+
+    <button
+    class="button hidden"
+    id="divideAgain"
+    onclick="makeSixteen()"
+    >
+Divide Again
+</button>
+
+<button
+class="button hidden"
+id="flattenButten"
+onclick="goTo('flatten')"
+>
+Next:Flatten
+</button>
+    </section>
+
+<section class="screen center" id="flatten">
+    <h2>Flatten</h2>
+    <p>
+        Click every dough ball to flatten it.
+    </p>
+    <div class="wafer-area" id="waferArea"></div>
+
+        <p class="progress" id="flatCount">
+            0 / 16 flattened
+</section>
+</body>
